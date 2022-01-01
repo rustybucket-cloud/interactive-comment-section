@@ -114,3 +114,11 @@ body {
         }
     }
 }
+
+.current-user-indicator {
+    background-color: hsl(238, 40%, 52%);
+    color: white;
+    padding: .15em .5em;
+    font-size: 14px;
+    border-radius: 2px;
+}

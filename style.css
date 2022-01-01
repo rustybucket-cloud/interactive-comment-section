@@ -151,4 +151,12 @@ body {
   width: 1.85em;
   height: auto;
 }
+
+.current-user-indicator {
+  background-color: #5457b6;
+  color: white;
+  padding: .15em .5em;
+  font-size: 14px;
+  border-radius: 2px;
+}
 /*# sourceMappingURL=style.css.map */
