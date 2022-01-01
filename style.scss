@@ -1,0 +1,116 @@
+* {
+    outline: red;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    background-color: hsl(223, 19%, 93%);
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    padding: 1em;
+}
+
+/* user comments */
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.comment, .reply-box {
+    background-color: white;
+    padding: 1em 1em;
+    border-radius: 5px;
+    display: grid;
+    row-gap: 1em;
+    grid-template-areas: 
+    "comment-info comment-info comment-info"
+    "content content content"
+    "score . reply";
+
+   .comment-info {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        grid-area: comment-info;
+
+        img {
+            width: 1.85em;
+            height: auto;
+        }
+        .username {
+            font-weight: 700;
+        }
+        .created-at {
+            color: hsl(211, 10%, 45%);
+        }
+    } 
+    .comment-content {
+        color: hsl(211, 10%, 45%);
+        line-height: 1.5em;
+        grid-area: content;
+        width: 100%;
+    }
+    .comment-score {
+        display: flex;
+        align-items: center;
+        gap: .5em;
+        background-color: hsl(223, 19%, 93%);
+        color: hsl(238, 40%, 52%);
+        padding: .5em 1em;
+        border-radius: 10px;
+        grid-area: score;
+
+    }
+    .reply {
+        display: flex;
+        align-items: center;
+        grid-area: reply;
+        gap: .5em;
+    }
+}
+
+.reply-box {
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.add-comment {
+    background-color: white;
+    width: 100%;
+    padding: 1em;
+    margin-top: 1em;
+    border-radius: 5px;;
+
+    textarea {
+        width: 100%;
+        min-height: 7em;
+        border-radius: 5px;
+        padding: 1em;
+        font-family: "Rubik", sans-serif;
+        color:hsl(211, 10%, 45%);
+        border: 1px solid hsl(239, 57%, 85%);
+        resize: none;
+    }
+
+    .add-comment-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: .5em;
+        align-items: center;
+
+        button {
+            background-color: hsl(238, 40%, 52%);
+            padding: .85em 1.75em;
+            font-size: 16px;
+            border-radius: 7px;
+            color: white;
+        }
+
+        img {
+            width: 1.85em;
+            height: auto;
+        }
+    }
+}
